@@ -1,4 +1,4 @@
-import type { MetaFunction } from 'remix'
+import { LoaderFunction, MetaFunction, redirect } from 'remix'
 
 export const meta: MetaFunction = () => {
   return {
@@ -7,6 +7,6 @@ export const meta: MetaFunction = () => {
   }
 }
 
-export default function Index() {
-  return <div>Index page</div>
+export const loader: LoaderFunction = () => {
+  return redirect('/dashboard/today')
 }

@@ -3,11 +3,13 @@ import type { LinksFunction } from 'remix'
 
 import globalStylesUrl from '~/styles/global.css'
 import tailwindStylesUrl from '~/styles/tailwind.css'
+import reachUIStylesUrl from '~/styles/reach-ui.css'
 
 export const links: LinksFunction = () => {
   return [
     { rel: 'stylesheet', href: globalStylesUrl },
     { rel: 'stylesheet', href: tailwindStylesUrl },
+    { rel: 'stylesheet', href: reachUIStylesUrl },
   ]
 }
 
@@ -76,7 +78,7 @@ function Document({ children, title }: { children: React.ReactNode; title?: stri
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="text-white bg-black">
         {children}
         <ScrollRestoration />
         <Scripts />
