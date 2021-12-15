@@ -32,3 +32,5 @@ npm run dev
 Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
 
 If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
+
+DATABASE_URL=postgresql://postgres:example@host.docker.internal:5432/postgres?schema=public
